@@ -32,7 +32,15 @@ describe('BMI Calculation', () => {
     json: jest.fn(),
   };
 
-  
+  it('should give cateogry and risk for BMI value', async () => {
+    const response = contollerBmi.calculateBodyHealth(18)
+    expect(response).to.deep.equal({category : "Underweight",risk : "Malnutrition risk"});
+  });
+
+  it('should calculate bmi for given height and weigth', async () => {
+    const response = contollerBmi.calculation(208, 68)
+    expect(response).to.deep.equal(15.72);
+  });
 
   it('should calculate bmi for request', async () => {
     contollerBmi.calculateBMI(req,res1)
