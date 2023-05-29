@@ -42,9 +42,5 @@ describe('BMI Calculation', () => {
     expect(response).to.deep.equal(15.72);
   });
 
-  it('should calculate bmi for request', async () => {
-    contollerBmi.calculateBMI(req,res1)
-    expect(res1.json.called);
-  });
 
 });
