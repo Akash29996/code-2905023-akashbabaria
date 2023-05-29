@@ -10,10 +10,6 @@ app.use(express.json());
 
 app.use('/api/bmiCalculator', bmiRouter);
 
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ error: 'Internal Server Error' });
-});
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
