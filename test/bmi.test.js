@@ -9,25 +9,6 @@ describe('BMI Calculation', () => {
     ]
   };
 
-  const res = [
-    {
-      "Gender": "Male",
-      "HeightCm": 208,
-      "WeightKg": 68,
-      "bmi": 15.72,
-      "category": "Underweight",
-      "risk": "Malnutrition risk"
-    },
-    {
-        "Gender": "Female",
-        "HeightCm": 204,
-        "WeightKg": 63,
-        "bmi": 15.14,
-        "category": "Underweight",
-        "risk": "Malnutrition risk"
-    }
-  ];
-
   const res1 = {
     json: jest.fn(),
   };
