@@ -51,7 +51,7 @@ const calculation = (heightCm, weightKg) => {
             overweightCount++;
           }
         }
-        res.json ({ overweightCount, results });
+        res.json ({results });
 
     } catch (error){
         res.status(400).json({ error: error.message });
